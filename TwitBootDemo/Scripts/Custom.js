@@ -25,7 +25,9 @@
             },
             schema: {
                 data: "movies",
-                total: "total"
+                total: "total",
+                links: "links",
+                ltemplate: "link_template"
             },
             change: function () {
                 // set the title and hasChanges property

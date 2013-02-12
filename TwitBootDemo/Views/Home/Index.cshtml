@@ -29,28 +29,28 @@
     </style>
 }
 
-    <div class="row">
-        <div class="span4">
-            <h3>Search</h3>
-            <div class="form-search">
-                <div class="input-prepend">
-                    <button data-bind="click: search" class="btn">Search</button>
-                    <input type="text" required data-bind="value: term" class="span2 search-query" name="term">
-                </div>
+<div class="row">
+    <div class="span4">
+        <h3>Search</h3>
+        <div class="form-search">
+            <div class="input-prepend">
+                <button data-bind="click: search" class="btn">Search</button>
+                <input type="text" required data-bind="value: term" class="span2 search-query" name="term">
             </div>
         </div>
-            <div class="span8">
-              <h3 data-bind="html: title"></h3>
-              <div id="results" data-bind="visible: hasResults">
-                <div data-role="pager" data-bind="source: results" id="pager" data-auto-bind="false"></div>
-                <div class="results row" data-selectable="true" data-pager="pager" data-auto-bind="false" data-scrolling="virtual" data-role="listview" data-bind="source: results" data-template="template"></div>
-                <div data-role="pager" data-bind="source: results" id="pager" data-auto-bind="false"></div>  
-              </div>
-              <div id="empty" data-bind="invisible: hasResults">
-                <p>No results...</p>
-              </div>
-            </div>
     </div>
+    <div class="span8">
+        <h3 data-bind="html: title"></h3>
+        <div id="results" data-bind="visible: hasResults">
+            <div data-role="pager" data-bind="source: results" id="pager" data-auto-bind="false"></div>
+            <div class="results row" data-selectable="true" data-pager="pager" data-auto-bind="false" data-scrolling="virtual" data-role="listview" data-bind="source: results" data-template="template"></div>
+            <div data-role="pager" data-bind="source: results" id="pager" data-auto-bind="false"></div>  
+        </div>
+        <div id="empty" data-bind="invisible: hasResults">
+            <p>No results...</p>
+        </div>
+    </div>
+</div>
 @section Script{
     <script type="text/x-kendo-template" id="template">
           <div class="result">
