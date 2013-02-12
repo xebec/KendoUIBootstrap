@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    @RenderSection("Head", false)
+@*	<link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />*@
+    <link href="@Url.Content("~/Content/kendo/2012.3.1315/kendo.default.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/kendo/2012.3.1315/kendo.common.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/bootstrap.css")" rel="stylesheet" type="text/css" />
+
+	<script src="@Url.Content("~/Scripts/kendo/2012.3.1315/jquery.min.js")"></script>
+	<script src="@Url.Content("~/Scripts/kendo/2012.3.1315/kendo.all.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/kendo/2012.3.1315/kendo.aspnetmvc.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/bootstrap.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/kendo.modernizr.custom.js")"></script>
+    <style>
+        body {
+          font-size: 14px;
+        }        
+        .margin10 {
+            margin-top:4px;
+        }
+        .title {
+          font-weight: bold;
+          font-size: 1.2em;
+        }
+        .logo {
+          height: 25px;
+          width: 88px;
+          margin-top: -10px;
+        }        
+    </style>
+</head>
+
+    <body>
+        <div>
+            <header>
+                <div class="navbar navbar-static-top">
+                    <div class="navbar-inner">
+                        <a class="brand">
+                            <img class="logo" src="http://images.rottentomatoescdn.com/images/trademark/flixster-logo.png" /> 
+                            Search
+                        </a>
+                        <ul class="nav">
+                            <li class="active">
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="http://www.rottentomatoes.com">Rotten Tomatoes</a>
+                            </li>
+                        </ul>
+                        <ul class="nav pull-right">
+                            <li>
+                                <div class="form-search margin10">
+                                    <div class="input-append">
+                                        <input type="text" data-bind="value: term" class="span2 search-query" name="term">
+                                        <button data-bind="click: search" class="btn">Search</button>
+                                    </div>
+                                </div>                                    
+                            </li>                           
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <section>
+                <div id="main">
+                    <div class="container">
+                        @RenderBody()                 
+                    </div>                
+                </div>
+            </section>
+            <footer>
+            </footer>
+        </div>
+        @RenderSection("Script", false)
+    </body>
+</html>
