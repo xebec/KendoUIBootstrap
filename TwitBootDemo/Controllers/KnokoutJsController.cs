@@ -13,6 +13,9 @@ namespace TwitBootDemo.Controllers
             return View();
         }
 
-      
+        public ActionResult Example2()
+        {
+            return View();
+        }
     }
 }

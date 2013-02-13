@@ -432,6 +432,7 @@
     <Content Include="Views\Shared\EditorTemplates\Number.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\Time.cshtml" />
     <Content Include="Views\KnokoutJs\Example1.cshtml" />
+    <Content Include="Views\KnokoutJs\Example2.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
