@@ -19,7 +19,7 @@
                             q: viewModel.get("term"),
                             page_limit: 10,
                             page: options.page
-                        }
+                        };
                     }
                 }
             },
